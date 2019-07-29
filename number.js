@@ -1,5 +1,10 @@
 "use strict";
 const button = document.querySelector(".js-button");
+function getRandomNumber(max) {
+  return Math.ceil(Math.random() * max);
+}
+const myRandomNumber = getRandomNumber(100);
+console.log(`Mi número aleatorio es ${myRandomNumber}`);
 
 const functionNumber = function(ev) {
   ev.preventDefault();
@@ -7,15 +12,18 @@ const functionNumber = function(ev) {
   const generateNumber = input.value;
   input.innerHTML = generateNumber;
 
-  const randomNumber = Math.random() * 100;
-  const number = randomNumber.toFixed(0);
-
-  if (number == 2) {
+  if (generateNumber < myRandomNumber) {
     const text = document.querySelector(".js-text");
-    text.innerHTML = "Holaaa";
-  } else {
+    text.innerHTML = "Demasiado bajo";
+  } else if (generateNumber > myRandomNumber) {
+    const text = document.querySelector(".js-text");
+    text.innerHTML = "Demasiado alto";
+  } else if (generateNumber === myRandomNumber) {
+    const text = document.querySelector(".js-text");
+    text.innerHTML == "¡MUY BIEN CAMPEONA!";
   }
+  const numberTimes = document.querySelector(".number-container");
+  numberTimes.innerHTML++;
 };
 
-const text = document.querySelector(".js-text");
 button.addEventListener("click", functionNumber);

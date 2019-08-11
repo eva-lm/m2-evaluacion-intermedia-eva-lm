@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="./styles/js.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
     <title>Evaluación intermedia</title>
   </head>
 
@@ -14,27 +14,21 @@
         <h1 class="js-title">Adivina el número</h1>
         <div class="number-container"></div>
       </div>
-      <form>
-        <div class="label">
-          <label>Introduce aquí tu número</label>
-        </div>
-        <div class="input-rectangle">
-          <input
-            class="js-input"
-            type="text"
-            placeholder="introduce numero"
-            required
-          />
-        </div>
-        <div class="button">
-          <input class="js-button" type="submit" value="PRUEBA" />
-        </div>
-        <div class="tracks">
-          <h4 class="js-text">Escribe un número y dale a <em>prueba</em></h4>
-        </div>
-      </form>
+
+      <label for="number">Introduce aquí tu número</label>
+      <input
+        class="js-input"
+        id="number"
+        type="text"
+        placeholder="introduce numero"
+        required
+      />
+      <button class="js-button">Enviar</button>
+      <div class="tracks">
+        <h4 class="js-text">Escribe un número y dale a <em>prueba</em></h4>
+      </div>
     </div>
 
-    <script type="text/javascript" src="number.js"></script>
+    <script type="text/javascript" src="./main.js"></script>
   </body>
 </html>
